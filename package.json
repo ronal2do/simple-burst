@@ -48,6 +48,7 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "gh-pages": "^0.12.0",
     "mo-js": "^0.288.1",
     "mojs": "^0.2.0",
     "react": "^15.4.1",
@@ -56,7 +57,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
